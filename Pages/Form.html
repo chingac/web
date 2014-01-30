@@ -1,0 +1,188 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Terrelli Coffee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../main.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="../header.js"></script>
+
+<script type="text/javascript">
+	<!--<![CDATA[
+	<!--helper function-->
+	function $(id){
+var element = document.getElementById(id);
+if( element == null )
+alert( "Programmer error: " + id + " does not exist." );
+return element;
+}
+<!--Fname-->
+function warnFnameInvalid(firstName){
+if($(firstName).value == "")
+$('FnameInvalid').innerHTML = "Please enter a First name.<br />";
+else
+$('FnameInvalid').innerHTML = "";
+
+}
+<!--Lname-->
+function warnLnameInvalid(lastName){
+if($(lastName).value == "")
+$('LnameInvalid').innerHTML = "Please enter a Last name.<br />";
+else
+$('LnameInvalid').innerHTML = "";
+}
+<!--Select drop down-->
+function testPositionValid(often){
+return ($(often).selectedIndex != 0);
+}
+function warnPositionInvalid(often){
+if( !testPositionValid(often) )
+$('SelInvalid').innerHTML = "Please enter a selection.<br />";
+else
+$('SelInvalid').innerHTML = "";
+}
+
+function testPositionRoastValid(roast){
+return ($(roast).selectedIndex != 0);
+}
+function warnPositionRoastInvalid(roast){
+if( !testPositionValid(roast) )
+$('SelInvalid1').innerHTML = "Please enter a selection.<br />";
+else
+$('SelInvalid1').innerHTML = "";
+}
+<!--Comments-->
+function warnCommentInvalid(addComments){
+if($(addComments).value == "")
+$('CommentInvalid').innerHTML = "Please enter a comment.<br />";
+else
+$('CommentInvalid').innerHTML = "";
+}
+
+// ]]> -->
+</script>
+    <script language="javascript" type="text/javascript" src="custom-form-elements.js"></script>
+  </head>
+  <body>
+  <div id="content1">
+  <div id="content0">
+  <div class="header">
+    <!--Login/Register bar-->
+        <div id="loginBar">
+            <label>
+                <p>
+            <div id="register">
+                        <a href="Register.html" id="register">Register</a>    
+            </div>        
+                Login:<input type="text" name="login" id="login" onblur="warnLoginInvalid('login')" />
+                Password:<input type="password" name="password" id="password" onblur="warnPasswordInvalid('password')" />
+                <input type="submit" name="Submit" value="Log in"><br />
+                <span id="loginInvalid"></span><br />
+                </p> 
+            </label>   
+        </div>
+    <!--Banner picture-->
+    <div id="logo">
+        <a href="../index.html"><img src="../Images/TerrellLogoSm2.jpg" alt=""/></a>
+    </div>
+    <!--Navigation bar-->
+    <div id="navBar">
+        <ul>
+            <li><a href="ProductIndex.html">Products</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Forum.html">Forum</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <!--Content-->
+    <div id="content">
+        <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">         
+            First name
+            <input type="text"  onblur="warnFnameInvalid('firstName')" id="firstName" name="firstName"/><br />
+			<span id="FnameInvalid"></span>
+			<br />
+	
+            Last name
+            <input type="text" id="lastName" onblur="warnLnameInvalid('lastName')" name="lastName"/><br />
+			<span id="LnameInvalid"></span>
+			<br />
+
+            Have you ever had our product before?<br />
+            Yes<input type="radio" name="hadProduct" value="Yes" checked="checked" /><br />
+            No<input type="radio" name="hadProduct" value="No" /><br />
+
+            How often do you drink coffee?<br />
+            <select size="1" id="often" name="often" onblur="warnPositionInvalid('often')">
+                <option> </option>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Never">Never</option>
+            </select><br />
+			<span id="SelInvalid"></span>
+			<br />
+
+            Which of our products do you like best?<br />
+            <select size="1" id="roast" name="roast" onblur="warnPositionRoastInvalid('roast')">
+                <option> </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select> <br />
+			<span id="SelInvalid1"></span>
+			<br />
+
+            Additional Feedback (200 chars)<br />
+            <textarea name="addComments" id="addComments" cols="40" rows="5" maxlength="200" onblur="warnCommentInvalid('addComments')">Enter comments here.</textarea>
+            <br />
+			<span id="CommentInvalid"></span>
+			<br />
+            <input type="Submit"/><input type="reset"/>
+        </form>     
+    </div>
+    <!--SiteMap-->
+    <div id="siteMap">
+        <!--External Site Links-->
+        <div>
+            <!--<p><a href="">*A link to twitter feed or youtube*</a></p>-->
+        </div>
+        <!--SiteMap links-->
+        <div class="footer">
+        <div>
+            <ul id="sitemap1">
+                <li><a href="Form.html">Feedback</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="ProductIndex.html">Products</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+            </ul>
+            <ul id="sitemap2">
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Forum.html">Forum</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+            <ul id="sitemap3">
+                <li><a href="BlendsEspresso.html">Espresso Coffee's</a></li>
+                <li><a href="Organic.html">Organic Coffee's</a></li>
+                <li><a href="SingleOrigin.html">Single Origin</a></li>
+            </ul>
+        </div>
+        <!--Our Passion Text-->
+            <p>OURPASSIONTEXT.<a href="Pages/About.html">Learn more about our company</a></p>
+        <!--Copyright Info-->
+            <p>CopyRight Info</p>
+	</div>
+</div>
+</div>
+  </body>
+</html>

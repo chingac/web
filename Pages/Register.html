@@ -1,0 +1,200 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="style1.css" type="text/css" />
+</head>
+  <header>
+    <title>Terrelli Coffee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../main.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../header.js"></script>
+	<script language="javascript" type="text/javascript">
+		function $(id){
+			var element = document.getElementById(id);
+			if( element == null )
+				alert( 'Programmer error: ' + id + ' does not exist.' );
+			return element;
+		}
+	
+		function testNameValid(id0, id1){
+				if ($(id0).value.length == 0 && $(id1).value.length == 0)
+					return true;
+				else
+					return false;
+		}
+		function warnNameInvalid(id0, id1){
+			if( testNameValid(id0, id1) == true)
+			$('nameInvalid').innerHTML = "Please enter a name.<br />";
+            else
+            $('nameInvalid').innerHTML = "";
+			
+		}
+		
+		function testEmailValid(id){
+				if ($(id).value.length == 0 )
+					return true;
+				else
+					return false;
+		}
+		function warnEmailInvalid(id){
+			if( testEmailValid(id) == true)
+			$('emailInvalid').innerHTML = "Please enter your Email.<br />";
+            else
+            $('emailInvalid').innerHTML = "";
+			
+		}
+		
+		function warnAccountValid(id){
+			if( testEmailValid(id) == true)
+			$('account').innerHTML = "Please enter your account name.<br />";
+            else
+            $('account').innerHTML = "";
+			
+		}
+		
+		function warnPasswordValid(id){
+			if( testEmailValid(id) == true)
+			$('passwordValid').innerHTML = "Please enter your password.<br />";
+            else
+            $('passwordValid').innerHTML = "";
+			
+		}
+		
+		function warnAddressValid(id){
+			if( testEmailValid(id) == true)
+			$('addressValid').innerHTML = "Please enter your address.<br />";
+            else
+            $('addressValid').innerHTML = "";
+			
+		}
+	
+	</script>
+
+  </header>
+  <body>
+    <div id="content1">
+  <div id="content0">
+  <div class="header">
+    <!--Login/Register bar-->
+        <div id="loginBar">
+            <label>
+                <p>
+            <div id="register">
+                        <a href="Register.html" id="register">Register</a>    
+            </div>        
+                Login:<input type="text" name="login" id="login" onblur="warnLoginInvalid('login')" />
+                Password:<input type="password" name="password" id="password" onblur="warnPasswordInvalid('password')" />
+                <input type="submit" name="Submit" value="Log in"><br />
+                <span id="loginInvalid"></span><br />
+                </p> 
+            </label>   
+        </div>
+    <!--Banner picture-->
+    <div id="logo">
+        <a href="../index.html"><img src="../Images/TerrellLogoSm2.jpg" alt=""/></a>
+    </div>
+    <!--Navigation bar-->
+
+    <div id="navBar">
+        <ul>
+            <li><a href="ProductIndex.html">Products</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Forum.html">Forum</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+
+        </ul>
+    </div>
+    </div>
+    <!--Content-->
+    <div id="content">
+		  <div id="singleContent">
+	
+			  <h1>Create Account Information</h1>
+			  
+			  <form method="post" action="">
+
+				  <label><span class="label">Name:</span><br />
+
+					First:&nbsp <input type="text" name="firstName" id="firstName" onblur="warnNameInvalid('firstName','lastName')"/>&nbsp &nbsp
+					Last:&nbsp <input type="text" name="lastName" id="lastName" onblur="warnNameInvalid('firstName','lastName')"/>
+					<br /><span id="nameInvalid"></span>
+				  </label>
+				  <br /><br />
+
+				  <label><span class="label">Email Address:</span><br />
+
+					<input type="text" size="45" name="email" id="email" onblur="warnEmailInvalid('email')"/>
+				  </label>
+				  <br /><span id="emailInvalid"></span>
+				  <br /><br />
+				  
+				  <label><span class="label">Account Name:</span><br />
+					<input type="text" name="accountName" id="accountName" onblur="warnAccountValid('accountName')"/>
+				  </label>
+				  <br /><span id="account"></span>
+				  <br /><br />
+				  
+				  <label><span class="label">Password:</span><br />
+
+					<input type="password" name="password" id="password" onblur="warnPasswordValid('password')"/>
+				  </label>
+				  <br /><span id="passwordValid"></span>
+				  <br /><br />
+				  
+				  <label><span class="label">Address:</span><br />
+					<input type="text" size="45" name="address" id="address" onblur="warnAddressValid('address')"/>
+				  </label>
+				  <br /><span id="addressValid"></span>
+				  <br /><br />
+				  
+				  <input type="submit" value="Submit"/>
+
+			  
+			  </form>
+		  </div>
+
+    </div>
+    <!--SiteMap-->
+    <div id="siteMap">
+        <!--External Site Links-->
+        <div>
+            <!--<p><a href="">*A link to twitter feed or youtube*</a></p>-->
+
+        </div>
+        <!--SiteMap links-->
+        <div>
+            <ul id="sitemap1">
+                <li><a href="Form.html">Feedback</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="ProductIndex.html">Products</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+            </ul>
+            <ul id="sitemap2">
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Forum.html">Forum</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+            <ul id="sitemap3">
+                <li><a href="BlendsEspresso.html">Espresso Coffee's</a></li>
+                <li><a href="Organic.html">Organic Coffee's</a></li>
+                <li><a href="SingleOrigin.html">Single Origin</a></li>
+            </ul>
+        </div>
+        <!--Our Passion Text-->
+        <div>
+            <p>OURPASSIONTEXT.<a href="About.html">Learn more about our company</a></p>
+        </div>
+
+        <!--Copyright Info-->
+        <div>
+            <p>CopyRightInfo</p>
+        </div>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

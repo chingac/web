@@ -1,0 +1,185 @@
+/* General webiste styling */
+body{
+	background-image: url('Images/bg.jpg');
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Grande", Verdana, sans-serif;
+	font-size: small;
+}
+
+p{
+	color: #6D4921;
+}
+
+a{
+	font-weight:bold;
+	color: #6D4921;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #D84519;
+	text-decoration: none;
+}
+
+/* Header */
+.header{
+	background-color: #fffad9;
+	margin-top: -15px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+#loginBar{
+	float: right;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+#register{
+	float: right;
+	margin-right: 10px;
+}
+
+#logo{
+	padding-bottom: 5px;
+}
+
+#navBar{
+	background-color: #fffad9;
+}
+
+#navBar li {
+	list-style: none;
+	display: inline;
+	border-left: 2px solid #D02433;
+	padding: 5px;
+}
+
+#navBar li:last-child{
+	border-right: 2px solid #D02433
+}
+
+/* footer */
+.footer{
+	background-color: #fffad9;
+	padding-top:10px;
+	padding-bottom:10px;
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+/*#sitemap li{
+	list-style: none;
+	display: inline;
+	padding: 5px;
+}*/
+#twitter {
+	
+}
+
+#sitemap1 {
+	position:relative;
+	list-style: none;
+	display: inline;
+	padding: 5px;
+	float:left;
+	margin-left: 1em;
+}
+#sitemap2 {
+	position:relative;
+	list-style: none;
+	display: inline;
+	padding: 5px;
+	float:left;
+	margin-left: 1em;
+
+}
+#sitemap3 {
+	position:relative;
+	list-style: none;
+	display: inline;
+	padding: 5px;
+	float:left;
+	margin-left: 1em;
+}
+/*asdfasdf*/
+#leftList ul{
+	text-align:left;
+	list-style-type:none;
+	font-size: .85em;
+	margin-left: -40px;
+	
+
+}
+#cpyright {
+	padding-right: 10em;
+	
+}
+th, td {padding:5px;
+	  text-align:center;
+
+	  
+	 
+}
+thead th{border: 2px solid #d84519; 
+		
+}
+tbody td{border: 2px solid #d84519; 
+		
+}
+table{border: 2px solid #d84519; 
+	margin-right:-5em;
+
+}
+#rightContent{ 
+	position:relative;
+			top:-25em;
+			left:15em;
+			margin-right:15em;
+	float:right;
+
+}
+#content{width:100%;
+min-width:800px;
+}
+
+#content0{
+	width: 800px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fffad9;
+}
+#content1{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 5px double #fffad9;
+}
+#description {
+	text-align:left;
+	float: right;
+	margin-left: 13em;
+	margin-top: -18em;
+}
+#image2 {
+	margin-top: 5em;
+	
+}
+#darkLightBar {
+	margin-left: 25em;
+	float:right;
+	margin-top: -5em;
+	margin-right: 3em;
+	
+}
+
+h1, h2 {
+	color: #6D4921;
+}

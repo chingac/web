@@ -1,0 +1,40 @@
+/* Content */
+.content{
+	text-align: center;
+	width: 800px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fffad9;
+}
+
+#slideshow{
+	/*padding: 10px;*/
+}
+
+#imageLink{
+}
+
+#imageLink li{
+	list-style: none;
+	display: inline;
+	padding: 5px;
+	margin: 5px;
+}
+#js {
+	margin-top: 100px;
+	float: left;
+	/*background-color: #fffad9;*/
+	margin-left: 20px;
+	border:5px double #fffad9;
+	
+
+}
+/*#js2 {
+	
+	border:5px double;
+	padding: 5px;
+	
+
+}*/
